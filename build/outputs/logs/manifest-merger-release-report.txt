@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml:2:13-83
+INJECTED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml:2:13-83
+	package
+		INJECTED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml
+	xmlns:android
+		ADDED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml:2:23-81
+uses-sdk
+INJECTED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml reason: use-sdk injection requested
+INJECTED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml
+INJECTED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml
+	android:targetSdkVersion
+		INJECTED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml
+	android:minSdkVersion
+		INJECTED from /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest6529803648259840619.xml

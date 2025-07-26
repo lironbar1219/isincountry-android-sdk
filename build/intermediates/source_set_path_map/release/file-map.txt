@@ -1,0 +1,11 @@
+com.example.isincountry.sdk-core-1.2.0-0 /home/liron/.gradle/caches/8.9/transforms/b00c656cda3dee34d8d1e9b2935ac19e/transformed/core-1.2.0/res
+com.example.isincountry.sdk-play-services-basement-18.1.0-1 /home/liron/.gradle/caches/8.9/transforms/dabe9a1ce0de01f744e414bb3685be65/transformed/play-services-basement-18.1.0/res
+com.example.isincountry.sdk-play-services-base-18.1.0-2 /home/liron/.gradle/caches/8.9/transforms/e4204b1c26bdb0ef2790332bf236e1c9/transformed/play-services-base-18.1.0/res
+com.example.isincountry.sdk-coordinatorlayout-1.0.0-3 /home/liron/.gradle/caches/8.9/transforms/f8b1f524229b9ace3d2bd134ca6e56a9/transformed/coordinatorlayout-1.0.0/res
+com.example.isincountry.sdk-pngs-4 /home/liron/AndroidStudioProjects/isincountry-sdk/build/generated/res/pngs/release
+com.example.isincountry.sdk-resValues-5 /home/liron/AndroidStudioProjects/isincountry-sdk/build/generated/res/resValues/release
+com.example.isincountry.sdk-mergeReleaseResources-6 /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.example.isincountry.sdk-mergeReleaseResources-7 /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.example.isincountry.sdk-merged_res-8 /home/liron/AndroidStudioProjects/isincountry-sdk/build/intermediates/merged_res/release
+com.example.isincountry.sdk-main-9 /home/liron/AndroidStudioProjects/isincountry-sdk/src/main/res
+com.example.isincountry.sdk-release-10 /home/liron/AndroidStudioProjects/isincountry-sdk/src/release/res
