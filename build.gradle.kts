@@ -58,14 +58,14 @@ publishing {
             afterEvaluate {
                 from(components["release"])
             }
-            groupId = "com.github.yourusername"
+            groupId = "com.github.lironbar"
             artifactId = "isincountry-sdk"
             version = "1.0.0"
 
             pom {
                 name.set("IsInCountry Android SDK")
                 description.set("Android SDK for checking if device location is within a specific country")
-                url.set("https://github.com/yourusername/isincountry-android-sdk")
+                url.set("https://github.com/lironbar/isincountry-android-sdk")
 
                 licenses {
                     license {
