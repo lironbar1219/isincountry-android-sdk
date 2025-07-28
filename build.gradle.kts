@@ -1,11 +1,11 @@
 plugins {
-    id("com.android.library") version "8.1.4"
+    alias(libs.plugins.android.library)
     id("maven-publish")
 }
 
 android {
     namespace = "com.example.isincountry.sdk"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 26
@@ -24,8 +24,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     publishing {
