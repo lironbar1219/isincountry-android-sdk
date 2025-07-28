@@ -2,6 +2,7 @@ jdk:
   - openjdk17
 before_install:
   - chmod +x ./gradlew
-  - export JAVA_HOME=$JAVA17_HOME
+  - sdk install java 17.0.2-open
+  - sdk use java 17.0.2-open
 install:
   - ./gradlew clean build publishToMavenLocal -x test
