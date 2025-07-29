@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ApiClient {
     private static final String ENDPOINT_CHECK_LOCATION = "/api/v1/check";
+    private static final String ENDPOINT_GET_COUNTRIES = "/api/v1/countries";
     private static final int TIMEOUT_SECONDS = 30;
 
     private OkHttpClient httpClient;
@@ -103,6 +104,55 @@ public class ApiClient {
         });
     }
 
+    /**
+     * Get list of all available countries
+     * @param callback Callback to receive the countries list
+     */
+    public void getCountries(IsInCountrySDK.CountriesCallback callback) {
+        if (serverUrl == null) {
+            callback.onError("Server URL not set");
+            return;
+        }
+
+        Request httpRequest = new Request.Builder()
+                .url(serverUrl + ENDPOINT_GET_COUNTRIES)
+                .get()
+                .build();
+
+        httpClient.newCall(httpRequest).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onError("Network error: " + e.getMessage());
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                try {
+                    if (response.isSuccessful()) {
+                        String responseBody = response.body().string();
+
+                        // Parse the server response format
+                        CountriesResponse countriesResponse = gson.fromJson(responseBody, CountriesResponse.class);
+
+                        if (countriesResponse != null && countriesResponse.success) {
+                            callback.onResult(countriesResponse);
+                        } else {
+                            String error = countriesResponse != null ? countriesResponse.error : "Unknown error";
+                            callback.onError("Server error: " + error);
+                        }
+                    } else {
+                        String errorBody = response.body() != null ? response.body().string() : "Unknown error";
+                        callback.onError("Server error (" + response.code() + "): " + errorBody);
+                    }
+                } catch (Exception e) {
+                    callback.onError("Response parsing error: " + e.getMessage());
+                } finally {
+                    response.close();
+                }
+            }
+        });
+    }
+
     // Inner classes to match server response format
     private static class ServerResponse {
         boolean success;
@@ -117,5 +167,18 @@ public class ApiClient {
         String country_code;
         String country_name;
         String checked_at;
+    }
+
+    public static class CountriesResponse {
+        public boolean success;
+        public Country[] data;
+        public int count;
+        public String error;
+    }
+
+    public static class Country {
+        public String code;
+        public String name;
+        // Add other fields as needed based on your Country model
     }
 }

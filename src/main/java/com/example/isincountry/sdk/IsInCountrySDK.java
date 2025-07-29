@@ -106,6 +106,14 @@ public class IsInCountrySDK {
     }
 
     /**
+     * Get list of all available countries from the server
+     * @param callback Callback to receive the countries list
+     */
+    public void getCountries(CountriesCallback callback) {
+        apiClient.getCountries(callback);
+    }
+
+    /**
      * Get current device location
      * @param callback Callback to receive location
      */
@@ -177,6 +185,14 @@ public class IsInCountrySDK {
      */
     public interface LocationCheckCallback {
         void onResult(boolean isInCountry, String message);
+        void onError(String error);
+    }
+
+    /**
+     * Callback interface for countries list results
+     */
+    public interface CountriesCallback {
+        void onResult(ApiClient.CountriesResponse response);
         void onError(String error);
     }
 }
