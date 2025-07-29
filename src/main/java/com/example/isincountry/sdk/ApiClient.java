@@ -177,8 +177,18 @@ public class ApiClient {
     }
 
     public static class Country {
-        public String code;
-        public String name;
-        // Add other fields as needed based on your Country model
+        public int id;
+        public String country_code;
+        public String country_name;
+        public String created_at;
+        public String updated_at;
+
+        public String getCountryCode() {
+            return country_code;
+        }
+
+        public String getCountryName() {
+            return country_name;
+        }
     }
 }
